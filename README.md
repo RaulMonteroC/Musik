@@ -1,4 +1,4 @@
-# SampleWebApi
+# Sample Web Api
 
 This is a sample web api implementation mainly created to test some features of ASP.NET's Web Api 2.
 
