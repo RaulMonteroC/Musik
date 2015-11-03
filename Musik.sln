@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Core", "Musik.Core\Musik.Core.csproj", "{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Test", "Musik.Test\Musik.Test.csproj", "{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Api", "Musik.Api\Musik.Api.csproj", "{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
