@@ -5,23 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using Sphere.Core;
 using Musik.Core.Data;
+using System.Reflection;
 
 namespace Musik.Core.Bussiness
 {
     public class Playlist
     {
-        public Repository<Song> SongRepository { get; set; }
+        private Repository<Song> songRepository;
+
+        public Playlist() : this(new ContextRepository<Song>()) { }
 
         public Playlist(Repository<Song> songRepository)
         {
-            this.SongRepository = songRepository;
+            this.songRepository = songRepository;
         }
 
         public void Add(Song song)
         {
             if (song != null)
             {
-                SongRepository.Add(song);
+                songRepository.Add(song);
             }
         }
 
@@ -29,23 +32,23 @@ namespace Musik.Core.Bussiness
         {
             if(song != null)
             {
-                SongRepository.Update(song);
+                songRepository.Update(song);
             }
         }
 
         public void Delete(Func<Song,bool> condition)
         {
-            SongRepository.Delete(condition);
+            songRepository.Delete(condition);
         }
 
         public IEnumerable<Song> Find(Func<Song,bool> condition)
         {
-            return SongRepository.Find(condition);
+            return songRepository.Find(condition);
         }
 
         public IEnumerable<Song> GetAll()
         {
-            return SongRepository.GetAll();
+            return songRepository.GetAll();
         }
     }
 }
