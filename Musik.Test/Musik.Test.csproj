@@ -56,10 +56,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PlaylistTest.cs" />
+    <Compile Include="Core\PlaylistTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Musik.Api\Musik.Api.csproj">
+      <Project>{51d745ee-0ca0-4fa3-bc48-ef33f69351d8}</Project>
+      <Name>Musik.Api</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Musik.Core\Musik.Core.csproj">
       <Project>{a1b1deb8-7714-4f31-b404-6be189a2efa2}</Project>
       <Name>Musik.Core</Name>

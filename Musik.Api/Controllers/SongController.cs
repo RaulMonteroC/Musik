@@ -22,5 +22,18 @@ namespace Musik.Api.Controllers
         {
             return playlist.GetAll();
         }
+
+        public HttpResponseMessage Get(int id)
+        {
+            HttpResponseMessage message = null;
+            var song = playlist.Find(m => m.Id == id).FirstOrDefault();
+
+            if (song == null) 
+                message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "No song was found with the given id");
+            else
+                message = Request.CreateResponse(HttpStatusCode.OK, song);
+
+            return message;
+        }
     }
 }
