@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Musik.Core.Data;
+using Sphere.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +14,7 @@ namespace Musik.Api
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            SphereConfig.GlobalContext = new MusikContext();
         }
     }
 }
