@@ -35,5 +35,88 @@ namespace Musik.Api.Controllers
 
             return message;
         }
+
+        public HttpResponseMessage Post([FromBody] Song song)
+        {
+            HttpResponseMessage message = null;
+
+            if (song == null)
+                message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Can't save an empty or null song");
+            else if (!IsValid(song)) 
+            {
+                message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Artist, Title and Album are required fields");
+            }
+            else
+            {
+                playlist.Add(song);
+                
+                message = Request.CreateResponse(HttpStatusCode.OK,"Song added sucessfully");
+            }
+
+            return message;
+        }
+
+        public HttpResponseMessage Delete(int id)
+        {
+            HttpResponseMessage message = null;
+            var song = playlist.Find(m => m.Id == id).FirstOrDefault();
+
+            if (song == null)
+                message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "No song was found with the given id");
+            else
+            {
+                playlist.Delete(m => m.Id == id);
+                message = Request.CreateResponse(HttpStatusCode.OK, "Message deleted successfully");
+            }
+
+            return message;
+        }
+
+        [HttpPut]
+        [HttpPatch]
+        public HttpResponseMessage Patch([FromBody] Song song)
+        {
+            HttpResponseMessage message = null;
+
+            if (song == null)
+                message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Can't update an empty or null song");
+            else if (!IsValid(song))
+            {
+                message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Artist, Title and Album can't be empty or null");
+            }
+            else if(song.Id <= 0)
+            {
+                message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Id can't be less or equal to 0");
+            }
+            else
+            {
+                var dbSong = playlist.Find(m => m.Id == song.Id).FirstOrDefault();
+                dbSong.Album = song.Album;
+                dbSong.Artist = song.Artist;
+                dbSong.Title = song.Title;
+                dbSong.VideoUrl = song.VideoUrl;
+
+                playlist.Edit(dbSong);
+
+                message = Request.CreateResponse(HttpStatusCode.OK, "Song updated sucessfully");
+            }
+
+            return message;
+        }
+        
+        private bool IsValid(Song song)
+        {
+            bool isValid = false;
+
+            if(song == null) return isValid;
+
+            var isArtistEmpty = String.IsNullOrEmpty(song.Artist);
+            var isTitleEmpty = String.IsNullOrEmpty(song.Title);
+            var isAlbumEmpty = String.IsNullOrEmpty(song.Album);            
+
+            isValid = !(isAlbumEmpty && isArtistEmpty && isTitleEmpty);
+
+            return isValid;
+        }
     }
 }
