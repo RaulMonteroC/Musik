@@ -74,9 +74,10 @@ namespace Musik.Api.Controllers
 
         [HttpPut]
         [HttpPatch]
-        public HttpResponseMessage Patch([FromBody] Song song)
+        public HttpResponseMessage Patch([FromBody] Song song, int id)
         {
             HttpResponseMessage message = null;
+            var dbSong = playlist.Find(m => m.Id == id).FirstOrDefault();
 
             if (song == null)
                 message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Can't update an empty or null song");
@@ -84,13 +85,13 @@ namespace Musik.Api.Controllers
             {
                 message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Artist, Title and Album can't be empty or null");
             }
-            else if(song.Id <= 0)
+            else if(dbSong == null)
             {
-                message = Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Id can't be less or equal to 0");
+                message = Request.CreateErrorResponse(HttpStatusCode.NotFound, "No song was found with the given id");
             }
             else
             {
-                var dbSong = playlist.Find(m => m.Id == song.Id).FirstOrDefault();
+                dbSong.Id = id;
                 dbSong.Album = song.Album;
                 dbSong.Artist = song.Artist;
                 dbSong.Title = song.Title;
