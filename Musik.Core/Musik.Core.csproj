@@ -39,7 +39,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sphere.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sphere.Core.1.0.1\lib\net45\Sphere.Core.dll</HintPath>
+      <HintPath>..\packages\Sphere.Core.1.0.2\lib\net45\Sphere.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -52,9 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bussiness\AuthorizationHandler.cs" />
     <Compile Include="Bussiness\Playlist.cs" />
     <Compile Include="Data\MusikContext.cs" />
     <Compile Include="Data\Song.cs" />
+    <Compile Include="Data\User.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

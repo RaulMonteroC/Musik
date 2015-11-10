@@ -10,6 +10,7 @@ namespace Musik.Core.Data
     public class MusikContext : DbContext
     {
         public DbSet<Song> Songs { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public MusikContext() : base("MusikDb") { }
     }
