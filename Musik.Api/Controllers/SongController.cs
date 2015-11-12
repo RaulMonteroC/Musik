@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Musik.Api.Filters;
+using Sphere.Core;
 
 namespace Musik.Api.Controllers
 {
@@ -16,9 +17,9 @@ namespace Musik.Api.Controllers
     {
         private Playlist playlist;
 
-        public SongController()
+        public SongController(Playlist playlist)
         {
-            playlist = new Playlist();
+            this.playlist = playlist;
         }
 
         public IEnumerable<Song> Get()
