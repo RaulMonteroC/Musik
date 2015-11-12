@@ -13,8 +13,6 @@ namespace Musik.Core.Bussiness
     {
         private Repository<Song> songRepository;
 
-       // public Playlist() : this(new ContextRepository<Song>()) { }
-
         public Playlist(Repository<Song> songRepository)
         {
             this.songRepository = songRepository;
