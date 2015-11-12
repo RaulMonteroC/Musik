@@ -17,17 +17,24 @@ namespace Musik.Client.Android
 		protected override void OnCreate (Bundle bundle)
 		{			
 			base.OnCreate (bundle);
-			SetContentView (Resource.Layout.Main);
+			SetContentView (Resource.Layout.Playlist);
 			InitializeComponents ();
+		}
+
+		public override bool OnCreateOptionsMenu (IMenu menu)
+		{
+			MenuInflater.Inflate (Resource.Menu.PlaylistMenu, menu);
+			
+			return base.OnCreateOptionsMenu (menu);
 		}
 
 		private void InitializeComponents()
 		{
 			songsList = FindViewById<ListView> (Resource.Id.songsList);
 			var songs = new string[]{ "One","She will be loved" };
-			var songsAdapter = new ArrayAdapter<string> (this, Resource.Layout.ListItem, songs);
+			var songsAdapter = new ArrayAdapter<string> (this, Resource.Layout.SongListItem, songs);
 
-			songsList.Adapter = songsAdapter;
+			songsList.Adapter = songsAdapter;		
 		}
 	}
 }

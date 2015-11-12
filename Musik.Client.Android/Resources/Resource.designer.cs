@@ -45,7 +45,10 @@ namespace Musik.Client.Android
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int ic_add_white_36dp = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
 			
 			static Drawable()
 			{
@@ -60,11 +63,14 @@ namespace Musik.Client.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int songsList = 2131034113;
+			// aapt resource value: 0x7f060002
+			public const int shareMenuItem = 2131099650;
 			
-			// aapt resource value: 0x7f050000
-			public const int textItem = 2131034112;
+			// aapt resource value: 0x7f060001
+			public const int songName = 2131099649;
+			
+			// aapt resource value: 0x7f060000
+			public const int songsList = 2131099648;
 			
 			static Id()
 			{
@@ -80,10 +86,10 @@ namespace Musik.Client.Android
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int ListItem = 2130903040;
+			public const int Playlist = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int SongListItem = 2130903041;
 			
 			static Layout()
 			{
@@ -91,6 +97,22 @@ namespace Musik.Client.Android
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int PlaylistMenu = 2131034112;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
