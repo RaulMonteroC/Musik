@@ -52,16 +52,22 @@
     <Compile Include="Bussiness\AuthorizationHandler.cs" />
     <Compile Include="Bussiness\Playlist.cs" />
     <Compile Include="Data\MusikContext.cs" />
-    <Compile Include="Data\Song.cs" />
-    <Compile Include="Data\User.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Musik.Core.Data\Musik.Core.Data.csproj">
+      <Project>{30dc2899-e87d-4d53-91a6-9445289225ee}</Project>
+      <Name>Musik.Core.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -16,6 +16,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -131,6 +132,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Musik.Core.Data\Musik.Core.Data.csproj">
+      <Project>{30dc2899-e87d-4d53-91a6-9445289225ee}</Project>
+      <Name>Musik.Core.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Musik.Core\Musik.Core.csproj">
       <Project>{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}</Project>
       <Name>Musik.Core</Name>

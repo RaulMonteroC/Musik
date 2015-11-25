@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Core", "Musik.Core\Musik.Core.csproj", "{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}"
 EndProject
@@ -11,28 +11,35 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Api", "Musik.Api\Musi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Client.Android", "Musik.Client.Android\Musik.Client.Android.csproj", "{B8968C3D-ACFC-4654-A934-A47410E05FA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Core.Data", "Musik.Core.Data\Musik.Core.Data.csproj", "{30DC2899-E87D-4D53-91A6-9445289225EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B1DEB8-7714-4F31-B404-6BE189A2EFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65F63FEB-0288-4BD3-A2B5-CC7F52F01442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D745EE-0CA0-4FA3-BC48-EF33F69351D8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8968C3D-ACFC-4654-A934-A47410E05FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8968C3D-ACFC-4654-A934-A47410E05FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8968C3D-ACFC-4654-A934-A47410E05FA5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{B8968C3D-ACFC-4654-A934-A47410E05FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8968C3D-ACFC-4654-A934-A47410E05FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30DC2899-E87D-4D53-91A6-9445289225EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30DC2899-E87D-4D53-91A6-9445289225EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30DC2899-E87D-4D53-91A6-9445289225EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DC2899-E87D-4D53-91A6-9445289225EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
