@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Api", "Musik.Api\Musi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Client.Android", "Musik.Client.Android\Musik.Client.Android.csproj", "{B8968C3D-ACFC-4654-A934-A47410E05FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Core.Data", "Musik.Core.Data\Musik.Core.Data.csproj", "{30DC2899-E87D-4D53-91A6-9445289225EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Musik.Core.Portable", "Musik.Core.Data\Musik.Core.Portable.csproj", "{30DC2899-E87D-4D53-91A6-9445289225EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

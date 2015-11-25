@@ -64,9 +64,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Musik.Core.Data\Musik.Core.Data.csproj">
+    <ProjectReference Include="..\Musik.Core.Data\Musik.Core.Portable.csproj">
       <Project>{30dc2899-e87d-4d53-91a6-9445289225ee}</Project>
-      <Name>Musik.Core.Data</Name>
+      <Name>Musik.Core.Portable</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
